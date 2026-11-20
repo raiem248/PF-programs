@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, original, reversed = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    original = n;
+    while (n > 0) {
+        reversed = reversed * 10 + n % 10;
+        n /= 10;
+    }
+    cout << "Reversed number = " << reversed << endl;
+    if (original == reversed)
+        cout << original << " is a Palindrome." << endl;
+    else
+        cout << original << " is not a Palindrome." << endl;
+    return 0;
+}
